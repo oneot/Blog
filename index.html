@@ -6,52 +6,87 @@
     <title>Video Slider</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        /* 전체적인 스타일 */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', sans-serif;
             background-color: #ffffff;
-            color: black;
+            color: #333333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
         }
+
+        /* 비디오 컨테이너 스타일 */
         .video-container {
             display: flex;
             overflow-x: scroll;
             scroll-snap-type: x mandatory;
             width: 100%;
             height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px; /* 양쪽에 여백 추가 */
         }
+
+        /* 각 비디오 아이템 */
         .video-item {
-            flex: 0 0 100%;
+            flex: 0 0 80%; /* 화면 너비의 80% */
             scroll-snap-align: start;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #ffffff;
-            border-radius: 10px;
+            border-radius: 20px; /* 둥근 모서리 */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+            margin: 0 15px; /* 비디오 간격 */
+            transition: transform 0.3s ease-in-out; /* 슬라이드 효과 */
         }
+
+        /* 비디오 크기 및 스타일 */
         video {
-            width: 80%;
-            max-width: 800px;
+            width: 100%;
             height: auto;
             border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-        .container {
-            text-align: center;
+
+        /* 스크롤바 스타일 */
+        .video-container::-webkit-scrollbar {
+            display: none; /* 스크롤바 숨기기 */
         }
+
+        /* 제목 스타일 */
         h1 {
-            color: #f4f4f9;
-            margin-bottom: 20px;
+            color: #333;
+            font-size: 3rem;
+            font-weight: bold;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* 배경 그라디언트 스타일 */
+        .container {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
+    <div class="container"></div>
+    <h1>Explore Our Videos</h1>
     <div class="video-container">
         <div class="video-item">
             <video controls>
