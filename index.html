@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player Page</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
@@ -20,7 +21,8 @@
             text-align: center;
         }
         video {
-            width: 80%;
+            width: 100%;
+            max-width: 800px; /* 최대 크기 제한 */
             height: auto;
             border: 2px solid #007acc;
             border-radius: 10px;
@@ -37,12 +39,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Video Page!!</h1>
         <video controls>
             <source src="https://oneot.github.io/Blog/video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Enjoy the video above!</p>
     </div>
 </body>
 </html>
