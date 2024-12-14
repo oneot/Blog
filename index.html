@@ -3,66 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my GitHub Page!">
-    <title>My GitHub Page</title>
+    <title>Video Player Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #007acc;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
             color: white;
-            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
             text-align: center;
         }
-        header h1 {
-            margin: 0;
+        video {
+            width: 80%;
+            height: auto;
+            border: 2px solid #007acc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+        h1 {
+            color: #f4f4f9;
+            margin-bottom: 20px;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        p {
+            color: #cccccc;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Page</h1>
-        <p>A simple webpage hosted on GitHub Pages</p>
-    </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Hello! I'm [Your Name], and this is my personal GitHub page. Here, you'll find information about my projects, interests, and more!</p>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/yourusername/project1" target="_blank">Project 1</a></li>
-            <li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
-            <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2024 [Your Name]. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
-    </footer>
+    <div class="container">
+        <h1>Welcome to My Video Page</h1>
+        <video controls>
+            <source src="Philly & New York.MP4" type="video/quicktime">
+            Your browser does not support the video tag.
+        </video>
+        <p>Enjoy the video above!</p>
+    </div>
 </body>
 </html>
